@@ -1,0 +1,25 @@
+{
+  "name": "em-induction-sim",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Навчальний симулятор: електромагнітна індукція, правило Ленца, струми Фуко, електродвигун",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "katex": "0.16.11",
+    "uplot": "1.6.31"
+  },
+  "devDependencies": {
+    "@types/katex": "0.16.7",
+    "happy-dom": "^15.11.7",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vitest": "2.1.8"
+  }
+}
