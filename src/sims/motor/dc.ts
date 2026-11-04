@@ -243,6 +243,8 @@ export function createDCSim(): SimPage {
   };
 
   restart();
+  const iS3 = new AutoScale(0.999);
+  page.enable3D(() => import('../../sims3d/dc').then((mod) => mod.dcScene(() => ({ m, mode, iRef: iS3.update(m.current()) }))));
   page.setTheory(dcTheory());
   page.setQuiz(dcQuiz);
   return page;

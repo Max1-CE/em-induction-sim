@@ -173,6 +173,7 @@ export function createHeatingSim(): SimPage {
   };
 
   rebuild();
+  page.enable3D(() => import('../../sims3d/heating').then((m) => m.heatingScene(() => ({ slab, lam, heat, n }))));
   page.setTheory(heatingTheory());
   page.setQuiz(heatingQuiz);
   return page;

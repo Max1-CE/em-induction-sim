@@ -153,6 +153,7 @@ export function createDiskSim(): SimPage {
   };
 
   rebuild();
+  page.enable3D(() => import('../../sims3d/disk').then((m) => m.diskScene(() => ({ model, br, p, jRef, scale: effScale(br.y[0]) }))));
   page.setTheory(diskTheory());
   page.setQuiz(diskQuiz);
   return page;

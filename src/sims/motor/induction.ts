@@ -205,6 +205,12 @@ function build(v: Variant): SimPage {
   };
 
   restart();
+  const iS3 = new AutoScale(0.999);
+  page.enable3D(() => import('../../sims3d/induction').then((mod) => mod.inductionScene(() => {
+    let iMax = 0;
+    for (let k = 0; k < m.p.N; k++) iMax = Math.max(iMax, Math.abs(m.rotorCurrent(k)));
+    return { m, can: v.can, iRef: iS3.update(iMax) };
+  }, v.can)));
   page.setTheory(v.can ? canTheory() : inductionTheory());
   page.setQuiz(v.can ? canQuiz : inductionQuiz);
   return page;

@@ -8,6 +8,7 @@ import { NowPanel, button } from './controls';
 import { renderMath } from './tex';
 import { quiz, type QuizQ } from './quiz';
 import { fmtNum } from '../physics/units';
+import type { Scene3D, Scene3DFactory, View3D } from './view3d';
 
 export interface Renderable {
   render(): void;
@@ -46,6 +47,9 @@ export class SimPage implements Page {
   speed = 1;
   paused = false;
   showLines = true;
+  /** Показувати вектори (B, v, F, I, ω) у 3D-сцені. */
+  showVectors = true;
+  mode3d = false;
   W = 800;
   H = 450;
 
@@ -56,6 +60,9 @@ export class SimPage implements Page {
   private lastChart = 0;
   private lastNow = 0;
   private pauseBtn: HTMLButtonElement;
+  private stage!: HTMLElement;
+  private s3: { view: View3D; scene: Scene3D } | null = null;
+  private s3err = '';
 
   constructor(title: string, lead: string, private aspect = 0.5) {
     this.canvas = h('canvas', {});
@@ -93,7 +100,7 @@ export class SimPage implements Page {
       h('h2', { class: 'sim-title' }, title),
       lead ? h('p', { class: 'sim-lead', html: lead }) : null,
       h('div', { class: 'sim-grid' },
-        h('div', { class: 'card' }, h('div', { class: 'stage' }, this.canvas), toolbar),
+        h('div', { class: 'card' }, (this.stage = h('div', { class: 'stage' }, this.canvas)), toolbar),
         h('div', { class: 'side' },
           h('div', { class: 'card' }, h('h3', {}, 'Параметри'), this.params),
           h('div', { class: 'card' }, h('h3', {}, 'Що зараз відбувається'), this.now.el),
@@ -103,6 +110,56 @@ export class SimPage implements Page {
       this.theoryEl,
       this.quizEl,
     );
+  }
+
+  /**
+   * Додати 3D-вид. load() ліниво завантажує модуль сцени (і three.js).
+   * Режим запам'ятовується (localStorage) і за замовчуванням увімкнений.
+   */
+  enable3D(load: () => Promise<Scene3DFactory>): void {
+    const b3 = button('🧊 3D', () => set3d(!this.mode3d));
+    const bv = button('➚ Вектори', () => {
+      this.showVectors = !this.showVectors;
+      bv.classList.toggle('on', this.showVectors);
+      localStorage.setItem('em-vec', this.showVectors ? '1' : '0');
+    });
+    this.showVectors = localStorage.getItem('em-vec') !== '0';
+    bv.classList.toggle('on', this.showVectors);
+    const msg = h('span', { class: 'muted', style: { fontSize: '12px' } });
+    this.tools.prepend(b3, bv, msg);
+    let loading: Promise<void> | null = null;
+    const ensure = () => (loading ??= Promise.all([import('./view3d'), load()]).then(([m, factory]) => {
+      const view = new m.View3D();
+      this.stage.append(view.el);
+      this.s3 = { view, scene: factory(view) };
+    }));
+    const set3d = (on: boolean) => {
+      this.mode3d = on;
+      b3.classList.toggle('on', on);
+      bv.style.display = on ? '' : 'none';
+      localStorage.setItem('em-3d', on ? '1' : '0');
+      if (!on) {
+        this.canvas.style.display = '';
+        if (this.s3) this.s3.view.el.style.display = 'none';
+        return;
+      }
+      msg.textContent = this.s3 ? '' : 'завантаження 3D…';
+      ensure().then(() => {
+        msg.textContent = '';
+        if (!this.mode3d || !this.s3) return;
+        this.canvas.style.display = 'none';
+        this.s3.view.el.style.display = '';
+      }).catch((e) => {
+        console.error(e);
+        this.s3err = String(e);
+        msg.textContent = '3D недоступне (WebGL): ' + this.s3err.slice(0, 60);
+        this.mode3d = false;
+        b3.classList.remove('on');
+        bv.style.display = 'none';
+        this.canvas.style.display = '';
+      });
+    };
+    set3d(localStorage.getItem('em-3d') !== '0');
   }
 
   setPaused(p: boolean): void {
@@ -159,9 +216,20 @@ export class SimPage implements Page {
     const dtReal = Math.min(0.05, Math.max(0, (ts - this.last) / 1000));
     this.last = ts;
     if (!this.paused && dtReal > 0) this.advance(dtReal);
-    this.resize();
-    this.ctx.clearRect(0, 0, this.W, this.H);
-    this.hooks.draw(this.ctx, this.W, this.H);
+    if (this.mode3d && this.s3) {
+      const w = this.stage.clientWidth || 800;
+      this.s3.view.resize(w, Math.min(Math.round(w * Math.max(this.aspect, 0.56)), 640));
+      try {
+        this.s3.scene.update({ vectors: this.showVectors, lines: this.showLines });
+      } catch (e) {
+        console.error(e);
+      }
+      this.s3.view.render();
+    } else {
+      this.resize();
+      this.ctx.clearRect(0, 0, this.W, this.H);
+      this.hooks.draw(this.ctx, this.W, this.H);
+    }
     if (ts - this.lastChart > 30) {
       this.charts.forEach((c) => c.render());
       this.lastChart = ts;

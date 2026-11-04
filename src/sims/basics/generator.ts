@@ -172,6 +172,8 @@ export function createGeneratorSim(): SimPage {
   };
 
   restart();
+  const iS3 = new AutoScale(0.999), eS3 = new AutoScale(0.999);
+  page.enable3D(() => import('../../sims3d/generator').then((mod) => mod.generatorScene(() => ({ g, iRef: iS3.update(g.current()), eRef: eS3.update(g.emf()) }))));
   page.setTheory(generatorTheory());
   page.setQuiz(generatorQuiz);
   return page;

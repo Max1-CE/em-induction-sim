@@ -218,6 +218,7 @@ export function createTubeSim(): SimPage {
   };
 
   rebuild();
+  page.enable3D(() => import('../../sims3d/tube').then((m) => m.tubeScene(() => ({ sim, free, p, flip, vt: terminalVelocity(p) }))));
   page.setTheory(tubeTheory());
   page.setQuiz(tubeQuiz);
   return page;

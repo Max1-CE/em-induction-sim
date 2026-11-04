@@ -169,6 +169,10 @@ export function createPendulumSim(): SimPage {
   };
 
   rebuild();
+  page.enable3D(() => import('../../sims3d/pendulum').then((m) => m.pendulumScene(() => ({
+    ps, pc, p, jRef,
+    labels: [`Суцільна (${units.fmt(solid.mass, 'mass')})`, `Гребінка, ${p.slots} прорізів (${units.fmt(comb.mass, 'mass')})`] as [string, string],
+  }))));
   page.setTheory(pendulumTheory());
   page.setQuiz(pendulumQuiz);
   return page;
