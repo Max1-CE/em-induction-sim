@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3D: генератор змінного струму — рамка обертається в однорідному полі між полюсами N і S. Вісь — вертикальна. */
 import { THREE, View3D, Arrow3D, ArrowPool, C3, makeLabel, setLabel, metalMat, currentRGB, type Scene3D } from '../ui/view3d';
 import type { Generator } from '../physics/generator';

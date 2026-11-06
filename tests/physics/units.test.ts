@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { DIMS, toSys, fromSys, fmtNum, type Dim } from '../../src/physics/units';
 import { C, SIEMENS_PER_M_TO_CGS, MU0_SI } from '../../src/physics/constants';

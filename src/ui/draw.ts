@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Допоміжні функції малювання на Canvas 2D (спільні для всіх анімацій). */
 
 export const COL = {

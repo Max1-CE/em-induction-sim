@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Графіки:
  *  LiveChart — часові ряди на uPlot (оновлення ≥30 fps), дані зберігаються в СГС,

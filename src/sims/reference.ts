@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 4. Довідник: одиниці СІ ↔ СГС, правила переведення формул, провідності, глосарій. */
 import { MATERIALS, C } from '../physics/constants';
 import { fmtNum } from '../physics/units';

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Спільне 3D-полотно (three.js): сцена, камера з обертанням мишею (OrbitControls), світло,
  * HTML-підписи (CSS2DRenderer) і «товсті» 3D-стрілки для векторів.

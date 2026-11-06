@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 2d. Нагрів провідної пластини змінним полем: суцільне vs шихтоване осердя, скін-ефект. */
 import { Slab, SlabHeating, thinPlatePower } from '../../physics/heating';
 import { materialById, C } from '../../physics/constants';

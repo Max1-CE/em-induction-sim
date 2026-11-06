@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 1c. Провідник на рейках у магнітному полі + демонстрація «анти-Ленца». */
 import { Rails } from '../../physics/rails';
 import { fromSys } from '../../physics/units';

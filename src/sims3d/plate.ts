@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Спільне для 3D-пластин (маятник, диск): текстура карти |j| і стрілки густини струму. */
 import { THREE, ArrowPool } from '../ui/view3d';
 import type { Grid } from '../physics/streamSolver';

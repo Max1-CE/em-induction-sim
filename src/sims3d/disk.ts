@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3D: електромагнітне гальмо — обертовий диск у зазорі П-подібного магніту. */
 import { THREE, View3D, Arrow3D, ArrowPool, C3, makeLabel, metalMat, type Scene3D } from '../ui/view3d';
 import type { DiskModel, DiskBrake, DiskParams } from '../physics/diskBrake';

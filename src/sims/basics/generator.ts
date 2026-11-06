@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 1b. Рамка, що обертається в однорідному полі — генератор змінного струму (вигляд згори). */
 import { Generator } from '../../physics/generator';
 import { fromSys } from '../../physics/units';

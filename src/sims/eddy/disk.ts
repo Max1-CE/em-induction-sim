@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 2c. Електромагнітне гальмо: обертовий диск і нерухомий магніт. */
 import { DiskModel, DiskBrake, type DiskParams } from '../../physics/diskBrake';
 import { materialById } from '../../physics/constants';

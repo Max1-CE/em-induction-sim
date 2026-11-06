@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 2a. Магніт падає в провідній трубі (порівняння з пластиковою). */
 import { EddyTube, FreeFall, terminalVelocity, type TubeParams } from '../../physics/eddyTube';
 import { MATERIALS, SIEMENS_PER_M_TO_CGS, materialById, G } from '../../physics/constants';

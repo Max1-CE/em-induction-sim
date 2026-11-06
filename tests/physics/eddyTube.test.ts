@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { EddyTube, terminalVelocity, type TubeParams } from '../../src/physics/eddyTube';
 import { energyError } from '../../src/physics/energy';

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 2b. Маятник Вальтенгофена: суцільна пластина vs гребінка. */
 import { PlateModel, Pendulum, type PendulumParams } from '../../physics/waltenhofen';
 import { materialById, G } from '../../physics/constants';

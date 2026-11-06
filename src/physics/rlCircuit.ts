@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 1. RL-коло з батареєю ε₀ і вимикачем.
  *

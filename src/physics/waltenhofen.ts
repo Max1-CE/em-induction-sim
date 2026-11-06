@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 2b. Маятник Вальтенгофена: провідна пластина гойдається між полюсами електромагніта.
  *

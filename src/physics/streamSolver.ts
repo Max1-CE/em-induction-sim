@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розв'язувач для функції струму ψ у тонкій провідній пластині (розділи 2b, 2c).
  *

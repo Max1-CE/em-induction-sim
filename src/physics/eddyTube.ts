@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 2a. Магніт (точковий диполь 𝔪 ∥ +z, маса M) падає в провідній трубі.
  * Труба — набір тонких кілець радіуса a, висоти h, товщини стінки w, центри z_k = (k + ½)h.

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Реєстр розділів і підрозділів застосунку. */
 import type { Page } from './ui/simpage';
 import { createCoilSim } from './sims/basics/coil';

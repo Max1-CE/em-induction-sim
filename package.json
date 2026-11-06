@@ -2,6 +2,7 @@
   "name": "em-induction-sim",
   "private": true,
   "version": "1.0.0",
+  "license": "MIT",
   "type": "module",
   "description": "Навчальний симулятор: електромагнітна індукція, правило Ленца, струми Фуко, електродвигун",
   "scripts": {

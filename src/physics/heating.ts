@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 2d. Нагрів провідної пластини змінним полем (індукційний нагрів, втрати в осерді).
  *

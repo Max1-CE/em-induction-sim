@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 1. Провідник довжини l ковзає по рейках у полі B (B ⟂ площини рейок), коло замкнене опором R.
  * x — положення стрижня, площа контуру lx.

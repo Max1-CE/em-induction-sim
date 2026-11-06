@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 1. Рамка (N витків, площа S), що обертається в однорідному полі B — генератор змінного струму.
  * φ — кут між нормаллю рамки і B.

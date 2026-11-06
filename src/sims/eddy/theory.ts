@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Теорія та питання для розділу 2 «Струми Фуко». */
 import { fp, ip } from '../../ui/tex';
 import type { QuizQ } from '../../ui/quiz';

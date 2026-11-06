@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Енергетичний баланс (головна перевірка коректності кожної моделі):
  *   E_мех + W_маг + Q_Дж − A_зовн = const,

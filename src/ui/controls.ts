@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Елементи керування: слайдери з одиницями, списки, перемикачі. */
 import type { Dim } from '../physics/units';
 import { fmtNum } from '../physics/units';

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { solvePoisson, dirichletEnergy, type Grid } from '../../src/physics/streamSolver';
 import { PlateModel, Pendulum, type PendulumParams } from '../../src/physics/waltenhofen';

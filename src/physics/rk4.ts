@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Класичний метод Рунге–Кутти 4-го порядку з фіксованим кроком:
  *   k₁ = f(t, y), k₂ = f(t+h/2, y+h k₁/2), k₃ = f(t+h/2, y+h k₂/2), k₄ = f(t+h, y+h k₃),

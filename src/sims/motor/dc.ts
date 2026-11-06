@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3a. Колекторний двигун постійного струму / генератор. */
 import { DCMotor, type DCMotorParams } from '../../physics/dcMotor';
 import { fromSys } from '../../physics/units';

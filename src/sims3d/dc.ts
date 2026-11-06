@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3D: колекторний двигун постійного струму. Вісь обертання — z, поле статора — +x (від N до S). */
 import { THREE, View3D, Arrow3D, ArrowPool, C3, makeLabel, setLabel, metalMat, currentRGB, type Scene3D } from '../ui/view3d';
 import type { DCMotor } from '../physics/dcMotor';

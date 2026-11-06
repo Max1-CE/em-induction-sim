@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 // @vitest-environment happy-dom
 /**
  * Smoke-тест інтерфейсу: кожна сторінка створюється, крокує, записує графіки, оновлює панель

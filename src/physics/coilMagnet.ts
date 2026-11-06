@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 1. Постійний магніт (точковий диполь 𝔪 ∥ +z) рухається вздовж осі котушки.
  *

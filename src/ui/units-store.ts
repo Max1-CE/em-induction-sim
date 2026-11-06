@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Глобальний вибір системи одиниць для виводу (фізика завжди в СГС). */
 import { fmt, toSys, unitLabel, type Dim, type UnitSystem } from '../physics/units';
 

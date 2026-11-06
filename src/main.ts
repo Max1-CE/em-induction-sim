@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Точка входу: вкладки розділів, перемикач СГС/СІ, ліниве створення сторінок. */
 import './style.css';
 import { h } from './ui/dom';

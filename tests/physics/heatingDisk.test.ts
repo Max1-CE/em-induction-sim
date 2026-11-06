@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { Slab, SlabHeating, skinDepth, thinPlatePower } from '../../src/physics/heating';
 import { DiskModel, DiskBrake, type DiskParams } from '../../src/physics/diskBrake';

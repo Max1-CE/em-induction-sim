@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 1a. Магніт рухається крізь котушку; гальванометр показує ЕРС. */
 import { CoilMagnet } from '../../physics/coilMagnet';
 import { fromSys } from '../../physics/units';

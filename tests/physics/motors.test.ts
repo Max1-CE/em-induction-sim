@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { DCMotor, commutator, type DCMotorParams } from '../../src/physics/dcMotor';
 import { InductionMotor, type InductionParams } from '../../src/physics/inductionMotor';

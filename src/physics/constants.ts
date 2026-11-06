@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Фізичні константи та властивості матеріалів.
  * УСІ величини — у гаусовій системі СГС (см, г, с, статА, Гс, Мкс, ерг…).

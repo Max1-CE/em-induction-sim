@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Розділ 3b. Асинхронний двигун: обертове поле трьох котушок і ротор «білкова клітка».
  *

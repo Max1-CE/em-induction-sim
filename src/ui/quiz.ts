@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Блок «Перевір себе»: питання з варіантами та поясненням правильної відповіді. */
 import { h } from './dom';
 import { renderMath } from './tex';

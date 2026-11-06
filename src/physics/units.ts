@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Системи одиниць: гаусова СГС (внутрішня) ↔ СІ (лише для виводу).
  * Для кожної розмірності зберігаємо множник k: x_СІ = k · x_СГС.

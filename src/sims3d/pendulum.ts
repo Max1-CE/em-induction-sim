@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3D: два маятники Вальтенгофена (суцільна пластина і гребінка) між полюсами електромагніту. */
 import { THREE, View3D, Arrow3D, ArrowPool, C3, makeLabel, setLabel, metalMat, type Scene3D } from '../ui/view3d';
 import type { PlateModel, Pendulum, PendulumParams } from '../physics/waltenhofen';

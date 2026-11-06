@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 1d. RL-коло з ручним вимикачем: аналітичний розв'язок через інтегрувальний множник τ(t) = e^{t/T}. */
 import { RLCircuit } from '../../physics/rlCircuit';
 import { fromSys } from '../../physics/units';

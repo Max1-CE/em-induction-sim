@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 import { describe, it, expect } from 'vitest';
 import { CoilMagnet } from '../../src/physics/coilMagnet';
 import { Generator } from '../../src/physics/generator';

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3b. Асинхронний двигун (обертове поле трьох фаз) і 3c. демо «алюмінієва банка під обертовим магнітом». */
 import { InductionMotor, type InductionParams } from '../../physics/inductionMotor';
 import { fromSys } from '../../physics/units';

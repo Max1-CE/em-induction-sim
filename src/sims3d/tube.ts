@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** 3D: магніт падає в мідній трубі; поруч — пластикова труба. Кільця-струми, поле диполя, сили. */
 import { THREE, View3D, Arrow3D, C3, magnetMesh, currentRGB, makeLabel, type Scene3D } from '../ui/view3d';
 import type { EddyTube, FreeFall, TubeParams } from '../physics/eddyTube';

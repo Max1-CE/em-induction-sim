@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /** Мінімальний хелпер для створення DOM-елементів. */
 export function h<K extends keyof HTMLElementTagNameMap>(
   tag: K,

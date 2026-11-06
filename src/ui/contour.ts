@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Max Kravchenko
+// SPDX-License-Identifier: MIT
+
 /**
  * Ізолінії скалярного поля на сітці (marching squares). Лінії ψ = const — це лінії струму,
  * бо j = rot(ψẑ) дотичне до ізоліній ψ.
